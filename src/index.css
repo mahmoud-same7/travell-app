@@ -1,13 +1,112 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  text-transform: capitalize !important;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.slide_home {
+  background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)) ,url(../src/assets/architecture-1868667_1280.jpg) center no-repeat ;
+  background-size: cover;
+  background-attachment: fixed;
 }
+
+.grid_box {
+  border-radius: 10px;
+  height: 250px;
+}
+
+.grid_box .text_grid {
+  position: absolute;
+  bottom: 15px;
+  color: #fff;
+  left: 15px;
+
+}
+
+.grid_box_Deals {
+  background-color: #fff;
+  box-shadow: 1px 2px 6px #eee;
+}
+.grid_box_Deals .image {
+  position: relative;
+}
+.cricle {
+  background: #fc5b62;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    bottom: -45px;
+    left: 50%;
+    margin: 0 0 0 -45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.box_text {
+  position: absolute;
+    background: #fff;
+    left: 4px;
+    background: #fff;
+    box-shadow: 1px 4px 15px #999;
+    padding: 20px 10px;
+    border-radius: 10px;
+    bottom: -80px;
+    width: 100%;
+    max-width: calc(100% - 30px);
+}
+
+
+/* ----------style slider imag-------------- */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  height: 150px;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ----------style slider imag-------------- */
+
+
+
+/* start Footer */
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+.footer ul li {
+  margin-bottom: 20px;
+  cursor: pointer;
+  color:#999;
+}
+
+.footer ul li:hover {
+  color: red;
+}
+/* end Footer */
