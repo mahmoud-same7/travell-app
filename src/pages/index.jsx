@@ -1,3 +1,4 @@
+import Form_Search from "../components/Form_search"
 import Footer from "../components/footer"
 import Holiday from "../components/holidays"
 import Slide_Home from "../components/slideHome"
@@ -10,6 +11,7 @@ const Home = ()=> {
     return(
         <>
             <Slide_Home/>
+            <Form_Search/>
             <Top_Hotel_Part/>
             <Deals/>
             <VisaCard/>
