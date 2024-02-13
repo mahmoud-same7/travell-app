@@ -47,7 +47,7 @@ const Home = () => {
           sx={{
             borderRadius: "20px",
             background: "#eee",
-            maxWidth: { xs: "300px", sm: "400px", md: "600px" },
+            maxWidth: { xs: "300px", sm: "500px", md: "600px" },
             m: "30px auto 10px auto",
             display: "flex",
             alignItems: "center",
@@ -58,7 +58,7 @@ const Home = () => {
             return (
               <Box key={indx} sx={{display:'flex',padding:'10px',cursor:'pointer',alignItems:'center' , fontWeight:'bold',['&:hover']:{background:'#fc5b62',color:'#fff'}}}>
                 {el.icon}
-                <Typography variant="p" component="p" sx={{mr:'10px'}}>
+                <Typography variant="p" component="p" sx={{mr:'10px',display:{xs:'none',sm:'inline-block'}}}>
                   {el.text}
                 </Typography>
               </Box>
