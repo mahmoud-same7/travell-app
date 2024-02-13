@@ -15,13 +15,18 @@ import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-const pages = ["Flight", "Hotel", "Transfers", "Car", "Activites", "Holiday"];
 
 
 const NavBar = () => {
+
+  const { t ,i18n} = useTranslation();
+
   const [anchorElNav, setAnchorElNav] = useState(null);
   const navigate = useNavigate()
+
+  const pages = [t('Flight'), t('Hotel'), t('Transfers'), t('car'), t('Active'), t('holiday')];
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -135,8 +140,8 @@ const NavBar = () => {
 
           <Box sx={{ flexGrow: 0 }}>
             <Button sx={{color:'#fff'}} onClick={()=> {navigate('/login')}}>
-                <AccountCircleIcon sx={{mr:'5px'}}/>
-                Login / Signup
+                <AccountCircleIcon sx={{mr:'5px' , ml:'5px'}}/>
+                {t('btn')}
             </Button>
           </Box>
         </Toolbar>

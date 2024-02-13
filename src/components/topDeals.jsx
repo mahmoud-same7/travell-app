@@ -1,9 +1,11 @@
 import { Box, Typography, Grid, Container, Button } from "@mui/material";
 import { Deal } from "../data";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Deals = () => {
   const [data, setData] = useState([...Deal]);
+  const {t} = useTranslation()
   return (
     <Box className="top_Deals" pt={6} pb={6} sx={{ background: "#f4f6f9" }}>
       <Box className="top_Deals_header" sx={{ textAlign: "center" }}>
@@ -23,16 +25,16 @@ const Deals = () => {
             color="primary"
             sx={{ display: "inline-block", fontWeight: "bolder" }}
           >
-            top deals
+            {t('Top Deals')}
           </Typography>
-          world wide
+          {t('world wide')}
         </Typography>
         <Typography
           variant="span"
           component="span"
           sx={{ display: "block", fontSize: "13px" , pb:3 }}
         >
-          The best tours and trip deals, globally.
+          {t('TopDeals_span')}
         </Typography>
       </Box>
       <Container maxWidth="lg" sx={{ pt: 3, pb: 3 }}>

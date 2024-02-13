@@ -1,5 +1,5 @@
 import * as React from "react";
-import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
+import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
@@ -11,24 +11,25 @@ import {
   FormControlLabel,
   FormLabel,
   InputAdornment,
-  InputLabel,
-  MenuItem,
+
   Radio,
   RadioGroup,
-  Select,
+  
   TextField,
 } from "@mui/material";
 import dayjs from "dayjs";
-import { AccountCircle } from "@mui/icons-material";
+
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import FlightLandIcon from "@mui/icons-material/FlightLand";
 import { isDisabled } from "@testing-library/user-event/dist/utils";
+import { useTranslation } from "react-i18next";
 
 export default function Form_Search() {
   const [depart, setDepart] = React.useState();
   const [returnDate, setReturnDate] = React.useState();
   const [age, setAge] = React.useState("");
   const [show, setShow] = React.useState(false);
+  const {t}  = useTranslation()
 
   const handleChange = (event) => {
     setAge(event.target.value);
@@ -49,7 +50,7 @@ export default function Form_Search() {
       <Container>
         <FormControl>
           <FormLabel id="demo-row-radio-buttons-group-label">
-            Choose the flight
+            {t("Choose The Flight")}
           </FormLabel>
           <RadioGroup
             row
@@ -60,12 +61,12 @@ export default function Form_Search() {
             <FormControlLabel
               value="oneWay"
               control={<Radio />}
-              label="one Way"
+              label={t('oneWay')}
             />
             <FormControlLabel
               value="Roundtrip/Return"
               control={<Radio />}
-              label="Roundtrip / Return"
+              label={t('twoWay')}
             />
           </RadioGroup>
         </FormControl>
@@ -73,7 +74,7 @@ export default function Form_Search() {
           <DemoContainer components={["DatePicker"]}>
             <TextField
               id="input-with-icon-textfield"
-              label="Departure"
+              label={t('Departure')}
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
@@ -81,12 +82,13 @@ export default function Form_Search() {
                   </InputAdornment>
                 ),
               }}
-              placeholder="From City"
+              placeholder={t('From City')}
               variant="filled"
             />
             <TextField
               id="input-with-icon-textfield"
-              label="Arrival"
+              label={t('Arrival')}
+              sx={{paddingRight:'8px'}}
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
@@ -94,36 +96,28 @@ export default function Form_Search() {
                   </InputAdornment>
                 ),
               }}
-              placeholder="To City"
+              placeholder={t('To City')}
               variant="filled"
             />
             <DatePicker
-              label="Depart Date"
+              label={t('Depart Date')}
               defaultValue={dayjs("2024-02-7")}
               slotProps={{ textField: { variant: "filled" } }}
               onChange={(newVal) => setDepart(newVal.$d)}
             />
             <DatePicker
               disabled={show ? false : true}
-              label="Return Date"
+              label= {t("Retrun Date")}
               defaultValue={dayjs("2024-02-9")}
               slotProps={{ textField: { variant: "filled" } }}
               onChange={(newVal) => setReturnDate(newVal.$d)}
             />
-            <FormControl fullWidth>
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={age}
-                label="Age"
-                variant="filled"
-                onChange={handleChange}
-              >
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
-              </Select>
-            </FormControl>
+            <TextField
+              label = {t('Travell')}
+              type = 'number'
+              variant="filled"
+              defaultValue={1}
+            />
             <Button
               type="submit"
               sx={{
@@ -133,7 +127,7 @@ export default function Form_Search() {
                 ["&:hover"]: { background: "#fc5b62" },
               }}
             >
-              search
+              {t('search')}
             </Button>
           </DemoContainer>
         </LocalizationProvider>

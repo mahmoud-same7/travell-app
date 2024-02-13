@@ -1,9 +1,11 @@
 import { Avatar, Box, Container, Grid, Typography } from "@mui/material";
 import { visaData } from "../data";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const VisaCard = () => {
   const [data, setData] = useState([...visaData]);
+  const {t} = useTranslation()
   return (
     <Box className="visa_card" sx={{ pt: 6, pb: 6 }}>
       <Container maxWidth="lg">
@@ -12,7 +14,7 @@ const VisaCard = () => {
           component="h4"
           sx={{ fontWeight: "bolder", mb: 6 }}
         >
-          Global Visa Services
+          {t('globalVisa')}
         </Typography>
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>

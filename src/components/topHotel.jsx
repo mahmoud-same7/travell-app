@@ -4,12 +4,14 @@ import Typography from "@mui/material/Typography";
 import img from '../assets/sea-3496528_640.jpg'
 import img1 from '../assets/chinatown-4582511_640.jpg'
 import img2 from '../assets/city-of-london-4481399_640.jpg'
+import { useTranslation } from "react-i18next";
 const Top_Hotel_Part = () => {
+  const {t} = useTranslation()
   return (
     <Box sx={{pt:8,pb:4}}>
       <Container maxWidth="lg">
       <Typography variant="h4" component="h4" sx={{fontWeight:'bolder',mb:6}}>
-        top hotel destination
+        {t('Top Hotel Destination')}
       </Typography>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2}>

@@ -8,7 +8,9 @@ body {
 
 }
 
-
+.css-i4bv87-MuiSvgIcon-root {
+  margin-top: 15px !important;
+}
 .slide_home {
   background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)) ,url(../src/assets/architecture-1868667_1280.jpg) center no-repeat ;
   background-size: cover;
@@ -99,6 +101,7 @@ body {
   list-style: none;
   padding-left: 0;
   margin-top: 20px;
+  padding-right: 0;
 }
 .footer ul li {
   margin-bottom: 20px;

@@ -6,6 +6,10 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import ErrorPage from './pages/errorPage';
 import Auth from './pages/auth';
 import Home from './pages';
+import Flight from './pages/fllight';
+import './i18n'
+
+
 
 const router =  createBrowserRouter([
   {
@@ -24,7 +28,11 @@ const router =  createBrowserRouter([
       {
         path:'/register',
         element: <Auth signUp={true}/>
-      }
+      },
+      {
+        path:'/flight',
+        element: <Flight/>
+      },
     ]
   }
 ]);

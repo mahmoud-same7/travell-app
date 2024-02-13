@@ -5,9 +5,11 @@ import DateRangeIcon from "@mui/icons-material/DateRange";
 import { holidayData } from "../data";
 import img from "../assets/city-of-london-4481399_640.jpg";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Holiday = () => {
   const [data, setData] = useState([...holidayData]);
+  const {t} = useTranslation()
   return (
     <Box className="Holiday_section" sx={{ pt: 6, pb: 20 , background:'#f4f6f9' }}>
       <Container maxWidth="lg">
@@ -17,7 +19,7 @@ const Holiday = () => {
             component="h4"
             sx={{ fontWeight: "bolder", mb: 2 }}
           >
-            Perfect Holidays
+            {t('prefectHoliday')}
           </Typography>
           <Typography
             variant="span"
@@ -29,9 +31,7 @@ const Holiday = () => {
               width: { xs: "310px", md: "500px" },
             }}
           >
-            Travel has helped us to understand the meaning of life and it has
-            helped us become better people. Each time we travel, we see the
-            world with new eyes.
+            {t('holiday_Span')}
           </Typography>
         </Box>
         <Box sx={{ flexGrow: 1 }}>

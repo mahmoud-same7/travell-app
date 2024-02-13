@@ -1,10 +1,12 @@
 import { Box, Container, Typography ,Grid } from "@mui/material"
+import { useTranslation } from "react-i18next"
 
 
 const Footer = ()=> {
-    const company=  ['contact us' , 'company',  'terms & conditions' , 'refund policy']
-    const links = ["Flight", "Hotel", "Transfers", "Car", "Activites", "Holiday"]
-    const support = ['privacy policy' , 'Disclaimer Policy', 'Refund Policy']
+    const {t} = useTranslation()
+    const company=  [t('Contact Us'),t('About'),t('Terms & Conditions'),t('Refund Policy'),]
+    const links = [t('Flight') , t('Hotel') ,t('Transfers'),t('car') , t('Active') ,t('holiday')]
+    const support = [t('Privacy Policy') ,t('Disclaimer Policy') ,t('Refund Policy')]
     return (
         <Box className="footer" sx={{background: "#f4f6f9", pt:10 ,pb:10}}>
             <Container maxWidth="lg">
@@ -19,7 +21,10 @@ const Footer = ()=> {
                     </>
                 </Grid>
                 <Grid item xs={12} md={6} lg={3}>
-                    <Typography variant="p" component='p' sx={{fontWeight:'bold',fs:'18px'}}>Company</Typography>
+                    <Typography variant="p" component='p'
+                     sx={{fontWeight:'bold',fs:'18px'}}>
+                        {t('CompanyFooter')}
+                     </Typography>
                     <ul>
                         {company.map((el,indx)=> {
                             return (
@@ -29,7 +34,10 @@ const Footer = ()=> {
                     </ul>
                 </Grid>
                 <Grid item xs={12} md={6} lg={3}>
-                    <Typography variant="p" component='p' sx={{fontWeight:'bold',fs:'18px'}}>Quick Links</Typography>
+                    <Typography variant="p" component='p' 
+                    sx={{fontWeight:'bold',fs:'18px'}}>
+                        {t('Quick Links')}
+                    </Typography>
                     <ul>
                         
                             {links.map((el,indx)=> {
@@ -41,7 +49,10 @@ const Footer = ()=> {
                     </ul>
                 </Grid>
                 <Grid item xs={12} md={6} lg={3}>
-                    <Typography variant="p" component='p' sx={{fontWeight:'bold',fs:'18px'}}>Supporting</Typography>
+                    <Typography variant="p" component='p' 
+                    sx={{fontWeight:'bold',fs:'18px'}}
+                    >{t('Supporting')}
+                    </Typography>
                     <ul>
                     {support.map((el,indx)=> {
                             return (
