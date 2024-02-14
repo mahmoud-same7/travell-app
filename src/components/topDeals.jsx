@@ -15,8 +15,8 @@ const Deals = () => {
           sx={{
             fontWeight: "bolder",
             mb: 6,
+            p:'10px',
             display: "inline-block",
-            mb: "10px",
           }}
         >
           <Typography
