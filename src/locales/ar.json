@@ -45,5 +45,13 @@
     "holiday":"عطلة",
     "Supporting":"الدعم",
     "Disclaimer Policy":"سياسة إخلاء المسؤولية",
-    "Privacy Policy":"سياسة الخصوصية"
+    "Privacy Policy":"سياسة الخصوصية",
+    "hotelForm": {
+      "Region,City,Area": "المنطقة او المدينة",
+      "Going to" : "الذهاب الى",
+      "Check-in":"وقت النزول ",
+      "Check-out":"وقت الخروج",
+      "No.of Nights":"عدد الليالي",
+      "Guests":"عدد المقيمين"
+    }
   }

@@ -45,5 +45,13 @@
     "holiday":"holiday",
     "Supporting":"Supporting",
     "Disclaimer Policy":"Disclaimer Policy",
-    "Privacy Policy":"Privacy Policy"
+    "Privacy Policy":"Privacy Policy",
+    "hotelForm": {
+      "Region,City,Area": "Region,City,Area",
+      "Going to" : "Going to",
+      "Check-in":"Check-in",
+      "Check-out":"Check-out",
+      "No.of Nights":"No.of Nights",
+      "Guests":"Guests"
+    }
   }

@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material"
 import FlightInfo from "../components/flight/flightInfo"
 import { useState } from "react"
-import Form_Search from "../components/Form_search"
+import Form_Search from "../components/forms/Form_search"
 import FlightAir from "../components/flight/flightAir"
 import HeaderFilter from "../components/flight/headerFilter"
 

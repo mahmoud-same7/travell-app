@@ -21,7 +21,7 @@ const HeaderFilter = ()=> {
                     <ArrowUpwardIcon sx={{color:'#999' ,fontSize:'14px'}}/>
                 </Button>
                 <Button sx={{display:'block',borderRight:'1px solid #999',borderRadius:'0',textTransform:'lowercase'}}>
-                    Pric
+                    Price
                     <ArrowUpwardIcon sx={{color:'#999' ,fontSize:'14px'}}/>
                 </Button>
             </Container>
